@@ -7,3 +7,8 @@
 /* Datenbanken auf Server anzeigen */
 SHOW DATABASES;
 
+SHOW DATABASES;
+
+CREATE DATABASE IF NOT EXISTS boo;
+
+SHOW DATABASES;
