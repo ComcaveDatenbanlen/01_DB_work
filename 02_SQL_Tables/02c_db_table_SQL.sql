@@ -1,21 +1,13 @@
 /* ------  Strukturen ----- */
 
-/* Kommentar 1 */
-#  Kommentar 2
--- Kommentar 3
+/* 	 
+	Doppelte DS werden nicht mehr zugelassen
+    UNIQUE
+*/
 
 /* Datenbanken auf Server anzeigen */
 SHOW DATABASES;
 
-<<<<<<< HEAD
-#CREATE DATABASE IF NOT EXISTS boo;
-
-#SHOW DATABASES;
-
-DROP DATABASE IF EXISTS boo;
-
-SHOW DATABASES;
-=======
 /* DB boo löschen, falls vorhanden*/
 DROP DATABASE IF EXISTS boo;
 
@@ -26,15 +18,16 @@ CREATE DATABASE IF NOT EXISTS boo;
 USE boo;
 
 /* Tabelle cats anlegen, falls noch nicht vorhanden*/
+
 CREATE TABLE IF NOT EXISTS cats
 (
-	name VARCHAR(20),
-	age INT
+	name VARCHAR(20) NOT NULL UNIQUE DEFAULT "TBA",
+	age INT NOT NULL DEFAULT 0
 );
 
 
 /* Alle Tabellen in der DB anzeigen */
-SHOW TABLES;
+#SHOW TABLES;
 
 /* Struktur der Tabelle anzeigen */
 DESCRIBE cats;
@@ -44,6 +37,9 @@ INSERT INTO cats(name,age) VALUES ("Grizabella", 29);
 INSERT INTO cats(age,name) VALUES (35, "Alonzo");
 INSERT INTO cats VALUES ();
 
+-- Doppelte Datensätze werden NICHT mehr zugelassen !
+INSERT INTO cats(age,name) VALUES (35, "Alonzo, der Coole!");
+
+
 /* ---- Inhalte der Tabelle anzeigen ---- */
 SELECT * FROM cats;
->>>>>>> 2612a6253086e5252f115ac2056e2d8ed060506e

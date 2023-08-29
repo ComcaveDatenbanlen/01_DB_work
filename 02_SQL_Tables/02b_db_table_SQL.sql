@@ -1,21 +1,13 @@
 /* ------  Strukturen ----- */
 
-/* Kommentar 1 */
-#  Kommentar 2
--- Kommentar 3
+/* 	 
+	NULL wird nicht mehr zugelassen
+    DEFAULT-Werte eintragen
+*/
 
 /* Datenbanken auf Server anzeigen */
 SHOW DATABASES;
 
-<<<<<<< HEAD
-#CREATE DATABASE IF NOT EXISTS boo;
-
-#SHOW DATABASES;
-
-DROP DATABASE IF EXISTS boo;
-
-SHOW DATABASES;
-=======
 /* DB boo löschen, falls vorhanden*/
 DROP DATABASE IF EXISTS boo;
 
@@ -28,8 +20,8 @@ USE boo;
 /* Tabelle cats anlegen, falls noch nicht vorhanden*/
 CREATE TABLE IF NOT EXISTS cats
 (
-	name VARCHAR(20),
-	age INT
+	name VARCHAR(20) NOT NULL DEFAULT "TBA",
+	age INT NOT NULL DEFAULT 0
 );
 
 
@@ -44,6 +36,10 @@ INSERT INTO cats(name,age) VALUES ("Grizabella", 29);
 INSERT INTO cats(age,name) VALUES (35, "Alonzo");
 INSERT INTO cats VALUES ();
 
+-- ABER: Doppelte Datensätze werden zugelassen !
+INSERT INTO cats(age,name) VALUES (35, "Alonzo");
+INSERT INTO cats(age,name) VALUES (35, "Alonzo");
+
+
 /* ---- Inhalte der Tabelle anzeigen ---- */
 SELECT * FROM cats;
->>>>>>> 2612a6253086e5252f115ac2056e2d8ed060506e
