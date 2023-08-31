@@ -99,7 +99,7 @@ LIMIT 400 -- X Zeilen ab 0
 */
 
 -- Eingrenzen/Filtern WHERE & RegEx
-/**/
+/*
 SELECT
 	c_name "Unternehmen"
 FROM stocks.ccc
@@ -107,7 +107,7 @@ FROM stocks.ccc
 #WHERE c_name RLIKE "^[1-9]"  -- mit Ziffer beginnend
 WHERE c_name RLIKE "[1-9]$"  -- mit Ziffer beginnend
 ORDER BY c_name;
-
+*/
 
 -- Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
 /*
@@ -120,6 +120,7 @@ SELECT
 FROM stocks.ccc
 
 #WHERE sector = "Financials" AND price < 30.0  -- =/>/<
+
 #WHERE sector = "Financials" AND (price BETWEEN 30.0 AND 50.0)  -- =/>/<
 WHERE sector = "Financials" AND NOT (price BETWEEN 20.0 AND 250.0) -- Band rausfiltern
 
