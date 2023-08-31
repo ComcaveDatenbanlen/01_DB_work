@@ -16,7 +16,11 @@ CREATE TABLE IF NOT EXISTS boo.users
 DESCRIBE boo.users;
 
 /* Daten */
+<<<<<<< HEAD
 -- Nachteil: PWDs liegen offen
+=======
+-- Nachteil: PWDs liegen offen! 
+>>>>>>> e592e6a8ca69c5a987e6b1c981af52ace81d99c2
 INSERT INTO boo.users(userName,firstName,familyName,userPwd) 
 VALUES ("max", "Max", "Mütze", "1234");
 INSERT INTO boo.users(userName,firstName,familyName,userPwd) 

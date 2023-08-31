@@ -20,7 +20,11 @@ DESCRIBE boo.users;
 INSERT INTO boo.users(userName,firstName,familyName,userPwd) 
 VALUES ("max", "Max", "Mütze", SHA1("1234"));
 INSERT INTO boo.users(userName,firstName,familyName,userPwd) 
+<<<<<<< HEAD
 VALUES ("maxine", "Maxine", "Mützerich",SHA1("#xD0"));
+=======
+VALUES ("maxine", "Maxine", "Mützerich", SHA1("#xD0"));
+>>>>>>> e592e6a8ca69c5a987e6b1c981af52ace81d99c2
 INSERT INTO boo.users(userName,firstName,familyName,userPwd) 
 VALUES ("maxl", "Max", "Mützerich", SHA1("user1234"));
 
